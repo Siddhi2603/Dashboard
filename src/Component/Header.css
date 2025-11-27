@@ -1,0 +1,144 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+.app {
+  background-color: #0c0c0c;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #0c0c0c;
+  border-bottom: 1px solid #3e3e3e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header-logo .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-title {
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.logo-title span:first-child {
+  font-size: 18px;
+  color: #333;
+}
+
+/* -------------------------
+   NAVIGATION
+-------------------------- */
+.app-header-navigation .tabs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tabs a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #c0c0c0;
+  padding: 6px 10px;
+  transition: 0.3s ease;
+}
+
+.tabs a:hover {
+  color: #929292;
+}
+
+.tabs .active {
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 4px;
+}
+
+/* -------------------------
+   ACTION BUTTONS
+-------------------------- */
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #e7e7e7;
+}
+
+.user-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.app-header-actions-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-button {
+  background: #f3f3f3;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.icon-button.large {
+  padding: 10px 12px;
+}
+
+.icon-button i {
+  font-size: 18px;
+  color: #e7e7e7;
+}
+
+/* -------------------------
+   MOBILE NAV BUTTON
+-------------------------- */
+.app-header-mobile {
+  display: none;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+  .app-header-navigation {
+    display: none;
+  }
+
+  .app-header-mobile {
+    display: flex;
+  }
+}
+
+
